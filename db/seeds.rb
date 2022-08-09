@@ -15,7 +15,7 @@ end
 20.times do
     Follower.create(
         user_id: rand(1..10),
-        follower_id rand(1..10)
+        follower_id: rand(1..10)
     )
 end
 # Seed your database here
