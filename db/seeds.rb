@@ -12,12 +12,6 @@ puts "🌱 Seeding spices..."
     )
 end
 
-10.times do
-    Follower.create(
-        user_id: rand(1..10),
-        follower_id: rand(1..10)
-    )
-end
 # Seed your database here
 
 puts "✅ Done seeding!"
