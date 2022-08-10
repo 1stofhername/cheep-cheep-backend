@@ -12,7 +12,7 @@ puts "🌱 Seeding spices..."
     )
 end
 
-20.times do
+10.times do
     Follower.create(
         user_id: rand(1..10),
         follower_id: rand(1..10)
