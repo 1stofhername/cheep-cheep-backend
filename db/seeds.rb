@@ -12,6 +12,21 @@ puts "🌱 Seeding spices..."
     )
 end
 
+20.times do
+    Message.create(
+        user_id: rand(1..10),
+        content: Faker::Lorem.sentence
+        
+    )
+end
+
+10.times do
+    Conversation.create(
+        message_id: rand(1..10),
+        user_id: rand(1..10)
+    )
+end
+
 # Seed your database here
 
 puts "✅ Done seeding!"

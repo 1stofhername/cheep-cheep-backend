@@ -10,11 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_08_09_215521) do
+ActiveRecord::Schema.define(version: 2022_08_10_043936) do
 
-  create_table "followers", force: :cascade do |t|
+  create_table "conversations", force: :cascade do |t|
+    t.integer "message_id"
     t.integer "user_id"
-    t.integer "follower_id"
+  end
+
+  create_table "messages", force: :cascade do |t|
+    t.integer "user_id"
+    t.string "content"
+    t.boolean "public"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
