@@ -15,12 +15,13 @@ end
 20.times do
     Message.create(
         user_id: rand(1..10),
-        content: Faker::Lorem.sentence
+        content: Faker::Lorem.sentence,
+        conversation_id: rand(1..5)
         
     )
 end
 
-10.times do
+5.times do
     Conversation.create(
         message_id: rand(1..10),
         user_id: rand(1..10)
